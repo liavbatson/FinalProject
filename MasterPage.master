@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+</head>
+<body dir="rtl">
+    <form id="form1" runat="server">
+    <nav>
+        <label class="logo">Geometry4Kids</label>
+        <ul>
+            <li id="HomePageLi" runat="server"><asp:HyperLink ID="HomePage" runat="server" NavigateUrl="~/HomePage.aspx">דף הבית</asp:HyperLink></li>
+            <li id="SignOutLi" runat="server"><asp:HyperLink ID="SignOut" runat="server" NavigateUrl="~/LogOut.aspx">התנתק</asp:HyperLink></li>
+            <li id="ManagerPanelLi" runat="server"><asp:HyperLink ID="ManagerPanel" runat="server" NavigateUrl="~/Manager/ManagerMenu.aspx">תפריט מנהל</asp:HyperLink></li>
+            <li id="UserPanelLi" runat="server"><asp:HyperLink ID="UserPanel" runat="server" NavigateUrl="~/User/UserMenu.aspx">תפריט משתמש</asp:HyperLink></li>
+            <li id="SignInLi" runat="server"><asp:HyperLink ID="SignIn" runat="server" NavigateUrl="~/LogIn.aspx">התחבר</asp:HyperLink></li>
+            <li id="SignUpLi" runat="server"><asp:HyperLink ID="SignUp" runat="server" NavigateUrl="~/Register.aspx">הירשם</asp:HyperLink></li>
+        </ul>
+    </nav>
+    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
